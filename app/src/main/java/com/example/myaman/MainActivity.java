@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToAuthorActivity(View view) {
-        Intent intent = new Intent(this, Sos.class);
+        Intent intent = new Intent(this, Routing.class);
         startActivity(intent);
     }
     public void goToAuthorHome(View view) {
