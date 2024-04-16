@@ -3,6 +3,7 @@ package com.example.myaman;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -35,11 +37,15 @@ public class Routing extends AppCompatActivity {
 
     MapView mapView ;
     TileCache tileCache;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.routing);
         AndroidGraphicFactory.createInstance(this.getApplication());
+
+
+        checkFilePermission();
 
         mapView= (MapView) findViewById(R.id.mapView);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
@@ -61,62 +67,92 @@ public class Routing extends AppCompatActivity {
 
 
 
+
+// Inside your activity's onCreate() or any method where you need the permission
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted
+            // You should show an explanation here if needed, then request the permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    REQUEST_EXTERNAL_STORAGE);
+        } else {
+            // Permission has already been granted
+            // Proceed with file access
+        }
+
+
+
     }
 
 
 
     public void checkFilePermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions((Activity) context, new String[]{
+            ActivityCompat.requestPermissions(this, new String[]{
                     Manifest.permission.READ_EXTERNAL_STORAGE}, 90);
         } else { // permission autorisée déjà... }
 
         }
     }
 
-
-    public void onRequestPermissionsREADResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 90 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
+        if (requestCode == 80 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            getBestLocationProvider();
         } else {
             Log.e("Routing", "Location permission denied");
         }
     }
+//     @Override
+//     public void onRequestPermissionsResult(int requestCode, String[] permissions, @NonNull int[] grantResults) {
+//
+//        if (requestCode == REQUEST_EXTERNAL_STORAGE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//
+//        } else {
+//            Log.e("Routing", "Location permission denied");
+//        }
+//    }
 
 
 
     TileRendererLayer tileRendererLayer;
     @Override
-
     protected void onStart() {
         super.onStart();
 
         try {
             // Attempt to read the map file
-            MapFile mapFile1 = new MapFile("/storage/emulated/0/maps/algeria.map");
+           // MapFile mapFile1 = new MapFile("/storage/emulated/0/maps/");
             // Proceed with map file operations
+            File file = new File("/storage/emulated/0/maps/planet_5.74,35.923_7.482,36.849-mapsforge-osm/planet_5.74,35.923_7.482,36.849.map");
+            MapDataStore mapDataStore = new MapFile(file);
+            tileRendererLayer = new TileRendererLayer(tileCache, mapDataStore,
+                    mapView.getModel().mapViewPosition,
+                    AndroidGraphicFactory.INSTANCE);
+            mapView.getLayerManager().getLayers().add(tileRendererLayer);
+
+            mapView.setCenter(new LatLong(36.245138, 6.570929));
+            mapView.setZoomLevel((byte) 19);
+
         } catch (MapFileException e) {
-            // Handle the exception
+            // Handle the exception more gracefully
             e.printStackTrace();
-            // Log an error message or show a toast to inform the user
+            // For example, show an error dialog to the user
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Error")
+                    .setMessage("Failed to read map file: " + e.getMessage())
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // You can handle the click event here
+                        }
+                    })
+                    .show();
         }
-
-        File file =
-                new File("/storage/emulated/0/maps/algeria.map");
-
-                        MapDataStore mapDataStore = new MapFile(file);
-        tileRendererLayer = new TileRendererLayer(tileCache, mapDataStore,
-                mapView.getModel().mapViewPosition,
-                AndroidGraphicFactory.INSTANCE);
-        mapView.getLayerManager().getLayers().add(tileRendererLayer);
-
-        mapView.setCenter(new LatLong(36.245138, 6.570929));
-        mapView.setZoomLevel((byte)19);
-
-
     }
+
 
 
 
@@ -143,14 +179,7 @@ public Routing(){
     }
 
 
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 80 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            getBestLocationProvider();
-        } else {
-            Log.e("Routing", "Location permission denied");
-        }
-    }
+
 
     // creteria fournisseur de position
     public void getBestLocationProvider() {
