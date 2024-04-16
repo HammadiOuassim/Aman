@@ -17,14 +17,20 @@
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/drawable/round_button_red.xml" value="0.173" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/drawable/sos_circle.xml" value="0.173" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/emergency_case_alert.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/emergency_case_confirm_deny.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/emergency_case_routing.xml" value="0.11594202898550725" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/esay.xml" value="0.16770833333333332" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/home.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/login.xml" value="0.16770833333333332" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/mec_service_provider.xml" value="0.11594202898550725" />
-        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/personal_information.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/personal_information.xml" value="0.10666666666666667" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/report_emergency.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/routing.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/sign_up.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/sos.xml" value="0.13043478260869565" />
+        <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/layout/sp_profile_information.xml" value="0.11594202898550725" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/mipmap-anydpi-v26/depanneur-home-image.xml" value="0.1495" />
         <entry key="..\:/Users/power/AndroidStudioProjects/MyAman/app/src/main/res/mipmap-anydpi-v26/depanneur-home-image_round.xml" value="0.1" />
       </map>

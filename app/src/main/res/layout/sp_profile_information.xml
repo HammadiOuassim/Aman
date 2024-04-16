@@ -63,9 +63,9 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/iv_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:id="@+id/iv_line"
         android:layout_below="@+id/personal_name"
         android:layout_marginTop="10dp"
         android:background="@color/black" />
@@ -160,7 +160,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ajouter 2 numero de famille"
+            android:text="Service"
             android:textSize="18dp"
             android:textStyle="normal"
             android:textColor="@color/black"
@@ -173,11 +173,46 @@
             android:background="@drawable/edit_txt"
             android:layout_marginTop="4dp"
             />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type de service"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edit_txt"
             android:layout_marginTop="4dp"
+            />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_txt"
+            android:layout_marginTop="4dp"
+
             />
 
 
@@ -197,48 +232,44 @@
             android:layout_height="40dp"
             android:background="@drawable/edit_txt"
             android:layout_marginTop="4dp"
+            android:drawableEnd="@drawable/map_icon"
             />
-
-
-
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textStyle="normal"
+            android:textSize="24dp"
+            android:drawableEnd="@drawable/back"
+            android:layout_marginTop="10dp"
+            />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="date de naissance"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sexe"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_icon"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_icon"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_icon"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_icon"
+                />
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
