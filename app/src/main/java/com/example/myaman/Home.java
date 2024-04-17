@@ -1,9 +1,12 @@
 package com.example.myaman;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +25,19 @@ public class Home extends AppCompatActivity {
         imgAnimation2 = findViewById(R.id.imgAnimation2);
         button = findViewById(R.id.button);
         startPulse();
+
+
+
+
+
+        ImageView imageView = findViewById(R.id.iv1);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle click event programmatically
+                goToSpList(v);
+            }
+        });
     }
     private void startPulse() {
         handlerAnimation.post(runnable);
@@ -52,4 +68,19 @@ public class Home extends AppCompatActivity {
             handlerAnimation.postDelayed(this, 1500);
         }
     };
+
+
+
+    public void goToReportEmaergency(View view) {
+        Intent intent = new Intent(this,ReportEmergency.class);
+        startActivity(intent);
+    }
+
+
+
+
+    public void goToSpList(View view){
+        Intent intent = new Intent(this,MecServiceProvider.class);
+        startActivity(intent);
+    }
 }
