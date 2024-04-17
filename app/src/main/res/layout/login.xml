@@ -126,6 +126,7 @@ android:layout_marginLeft="10dp"
         android:textStyle="bold"
         android:textSize="24dp"
         android:layout_margin="20dp"
+        android:onClick="connect"
         />
 
 

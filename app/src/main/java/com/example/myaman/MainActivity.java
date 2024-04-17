@@ -14,12 +14,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goToAuthorActivity(View view) {
-        Intent intent = new Intent(this, Routing.class);
+
+    public void goToLogin(View view) {
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
-    public void goToAuthorHome(View view) {
-        Intent intent = new Intent(this, Home.class);
+
+    public void goToSignUp(View view) {
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 }

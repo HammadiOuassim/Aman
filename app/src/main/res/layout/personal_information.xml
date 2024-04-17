@@ -70,307 +70,193 @@
         android:layout_marginTop="10dp"
         android:background="@color/black" />
 
-
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/information"
-        android:orientation="vertical"
+        android:id="@+id/informationSv"
         android:layout_below="@+id/iv_line"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_above="@+id/navBarPIFragment"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nom"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
 
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Prenom"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Numero telephone"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ajouter 2 numero de famille"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Position locale"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="date de naissance"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sexe"
-            android:textSize="18dp"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_txt"
-            android:layout_marginTop="4dp"
-            />
-
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="changer le mot de passe"
-            android:textStyle="normal"
-            android:textSize="24dp"
-            android:drawableEnd="@drawable/back"
-            android:layout_marginTop="10dp"
-            />
+            android:layout_below="@+id/iv_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
 
-    <LinearLayout
-        android:id="@+id/navBar"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Prenom"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Numero telephone"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ajouter 2 numero de famille"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Position locale"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="date de naissance"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="sexe"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_txt" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/back"
+                android:text="changer le mot de passe"
+                android:textSize="24dp"
+                android:textStyle="normal"
+                android:layout_marginBottom="40dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+    <fragment
+        android:name="com.example.myaman.NavBarFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingStart="20dp"
-        android:paddingTop="15dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="15dp"
-        android:weightSum="4"
-        tools:targetApi="LOLLIPOP">
+        android:id="@+id/navBarPIFragment"
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/login_button"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/home_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Home"
-                android:textColor="@color/grisBold"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/login_button"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/search" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Home"
-                android:textColor="@color/grisBold"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/login_button"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/history" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Home"
-                android:textColor="@color/grisBold"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/login_button"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/person" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Home"
-                android:textColor="@color/grisBold"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
+        />
 
 </RelativeLayout>

@@ -59,7 +59,7 @@
             android:background="@drawable/login_button"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:onClick="goToAuthorActivity" />
+            android:onClick="goToLogin" />
 
         <Button
             android:id="@+id/inscrire"
@@ -76,7 +76,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
 
-            android:onClick="goToAuthorHome"
+            android:onClick="goToSignUp"
             />
 
 
